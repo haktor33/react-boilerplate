@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import 'antd/dist/reset.css';
+import i18n from './i18n';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+const App = () => {
+    return (
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+            {i18n.t("test.t1")}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    );
 }
 
 export default App;
