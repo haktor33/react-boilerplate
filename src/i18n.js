@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import { Languages } from './constants/system.constants'
 import { LanguagePacks } from "./locales/";
 
-const userStorage = JSON.parse(localStorage.getItem('AuthStorage') || "");
+const userStorage = JSON.parse(localStorage.getItem('AuthStorage'));
 
 i18n
     .use(initReactI18next)

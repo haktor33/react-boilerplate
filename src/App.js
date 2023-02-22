@@ -1,13 +1,14 @@
 import React from "react"
-import 'antd/dist/reset.css';
-import i18n from './i18n';
+import MainLayout from "components/layout/MainLayout";
+import { MainRoutes } from 'router/main.routes'
+
 
 const App = () => {
-    return (
-        <p>
-            {i18n.t("test.t1")}
-        </p>
-    );
-}
 
+    return (
+        <MainLayout>
+            {MainRoutes}
+        </MainLayout>
+    );
+};
 export default App;
