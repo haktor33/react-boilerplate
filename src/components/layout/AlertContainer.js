@@ -1,19 +1,25 @@
 import React, { useEffect } from 'react';
-import { notification } from './AlertProps.js';
+import { notification } from 'antd';
 import { connect } from "react-redux";
 import { alertActions } from 'store/actions/alert.actions';
 
-
 const AlertContainer = (props) => {
+
+    const [api, contextHolder] = notification.useNotification();
 
     useEffect(() => {
         if (props.alert.message) {
-            notification(props.alert.type, props.alert.header, props.alert.message);
-            setTimeout(()=>props.clearAlert(), 700)
+            const { type, header, message } = props.alert;
+            api[type]({
+                message: header,
+                description: message
+            });
+            setTimeout(() => props.clearAlert(), 700)
         }
         //eslint-disable-next-line
     }, [props.alert.message]);
-    return <></>;
+
+    return <>{contextHolder}</>;
 }
 
 const stateCreators = state => {
