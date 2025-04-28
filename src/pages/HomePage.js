@@ -1,9 +1,10 @@
 import React from "react";
+import i18n from "i18n";
 
 const HomePage = () => {
 
     return (
-        <div>Home Page</div>
+        <div>{i18n.t("pages.home")}</div>
     );
 }
 

@@ -4,9 +4,9 @@ export default {
         "contact":"İletişim"
     },
     "english": "İngilizce",
+    "test": "Test",
     "turkish": "Türkçe",
     "login": "Giriş Yap",
     "signup": "Kaydol",
     "signout": "Çıkış Yap",
-    
 }

@@ -3,6 +3,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Layout, theme } from 'antd';
 import "styles/layout.css";
 import NavMenu from 'components/menu/NavMenu';
+import AlertContainer from './AlertContainer';
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -27,9 +28,10 @@ const MainLayout = (props) => {
                     <React.Suspense fallback={<div>Loading...</div>}>
                         {props.children}
                     </React.Suspense>
+                    <AlertContainer />
                 </Content>
                 <Footer className="page-footer">
-                    ©2023 Created by Haktor
+                    2025 Created by Haktor
                 </Footer>
             </Layout>
         </Layout>

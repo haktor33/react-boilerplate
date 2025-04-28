@@ -21,7 +21,7 @@ const NavMenu = () => {
             {
                 key: '3',
                 icon: <UploadOutlined />,
-                label: 'nav 3',
+                label: <Link to="/ReduxTestPage">{i18n.t("test")}</Link>,
             },
         ]}
     />

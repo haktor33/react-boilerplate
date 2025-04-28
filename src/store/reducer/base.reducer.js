@@ -1,4 +1,4 @@
-import { baseActionTypes as type } from '../actionTypes/base.action.types';
+import { baseActionTypes as type } from 'store/actionTypes/base.action.types';
 
 const userStorage = JSON.parse(localStorage.getItem('AuthStorage'));
 

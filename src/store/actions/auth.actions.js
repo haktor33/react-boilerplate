@@ -1,6 +1,6 @@
 import { isExpired, decodeToken } from "react-jwt";
-import { authConstants } from '../../constants/auth.constants';
-import { authService } from '../../services/auth.services'
+import { authConstants } from 'constants/auth.constants';
+import { authService } from 'services/auth.services'
 import { alertActions } from './alert.actions';
 import { baseActions } from './base.actions';
 

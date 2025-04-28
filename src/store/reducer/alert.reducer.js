@@ -1,4 +1,4 @@
-import { notificationType as type } from '../../constants/alert.constants';
+import { notificationType as type } from 'constants/alert.constants';
 
 export function alert(state = {}, action) {
     switch (action.type) {
