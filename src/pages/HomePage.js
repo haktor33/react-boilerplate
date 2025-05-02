@@ -1,5 +1,6 @@
 import React from "react";
 import i18n from "i18n";
+import { withTranslation } from "react-i18next";
 
 const HomePage = () => {
 
@@ -8,4 +9,4 @@ const HomePage = () => {
     );
 }
 
-export default HomePage;
+export default withTranslation()(HomePage);

@@ -3,6 +3,7 @@ export default {
         "home": "Home",
         "contact": "Contact"
     },
+    "test": "Test English",
     "english": "English",
     "turkish": "Türkçe",
     "login": "Login",

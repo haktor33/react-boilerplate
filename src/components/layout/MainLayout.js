@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Layout, theme } from 'antd';
 import "styles/layout.css";
 import NavMenu from 'components/menu/NavMenu';
 import AlertContainer from './AlertContainer';
+import HeaderLayout from './HeaderLayout';
+import { withTranslation } from 'react-i18next';
 
-const { Header, Sider, Content, Footer } = Layout;
+const { Sider, Content, Footer } = Layout;
 
 const MainLayout = (props) => {
     const [collapsed, setCollapsed] = useState(false);
@@ -18,12 +19,7 @@ const MainLayout = (props) => {
                 <NavMenu />
             </Sider>
             <Layout className="site-layout">
-                <Header className="page-header" style={{ padding: 0, background: colorBgContainer, }} >
-                    {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                        className: 'trigger',
-                        onClick: () => setCollapsed(!collapsed),
-                    })}
-                </Header>
+                <HeaderLayout {...{ collapsed, setCollapsed, colorBgContainer }} />
                 <Content className="page-content" style={{ background: colorBgContainer, }}>
                     <React.Suspense fallback={<div>Loading...</div>}>
                         {props.children}
@@ -37,4 +33,5 @@ const MainLayout = (props) => {
         </Layout>
     );
 };
-export default MainLayout;
+
+export default withTranslation()(MainLayout);

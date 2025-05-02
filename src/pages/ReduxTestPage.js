@@ -8,8 +8,6 @@ import { compose } from "redux";
 
 const ReduxTestPage = (props) => {
 
-    console.log(props);
-
     const testAlert = () => {
         props.success("header","content");
     }
@@ -23,7 +21,7 @@ const ReduxTestPage = (props) => {
     );
 }
 
-const stateCreators = (state) => {
+const mapStateToProps = (state) => {
     const { base } = state || [];
     return { base };
 };
@@ -32,4 +30,4 @@ const mapDispatchToProps = {
     ...alertActions,
 };
 
-export default compose(withTranslation(), connect(stateCreators, mapDispatchToProps))(ReduxTestPage);
+export default compose(withTranslation(), connect(mapStateToProps, mapDispatchToProps))(ReduxTestPage);

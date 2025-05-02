@@ -3,8 +3,8 @@ export default {
         "home": "Ana Sayfa",
         "contact":"İletişim"
     },
-    "english": "İngilizce",
-    "test": "Test",
+    "test": "Test Türkçe",
+    "english": "English",
     "turkish": "Türkçe",
     "login": "Giriş Yap",
     "signup": "Kaydol",
